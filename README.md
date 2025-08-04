@@ -66,11 +66,6 @@ keeper-pdf-generator/
 ├── upload_templates_to_vault.py    # Vault template updater
 ├── requirements.txt                # Python dependencies
 ├── README.md                      # This file
-├── temp_templates/                # Template files
-│   ├── ENHANCED_extern_template.docx    # External customer template
-│   ├── ENHANCED_intern_template.docx    # Internal customer template
-│   ├── 20250000_E-Mail_Datenblatt_Kundenname.docx  # Original extern
-│   └── 20250000_Datenblatt_Kundenname.docx         # Original intern
 └── generated_pdfs/               # Output directory
     ├── customer1_credentials.pdf
     ├── customer2_credentials.pdf
@@ -229,5 +224,6 @@ For issues and questions:
 This project is developed for internal use with Keeper Security vault integration.
 
 ## Author
+
 
 Developed by AI Assistant for automated customer credential document generation.
