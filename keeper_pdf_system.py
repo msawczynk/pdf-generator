@@ -38,7 +38,7 @@ logger = logging.getLogger(__name__)
 class KeeperPDFGenerator:
     """Main class for PDF generation from Keeper vault data"""
     
-    def __init__(self, username='martin.test@kunze-medien.de'):
+    def __init__(self):
         self.username = username
         self.params = None
         self.template_paths = {
@@ -69,14 +69,6 @@ class KeeperPDFGenerator:
         """Get list of customer folders from vault"""
         try:
             customers = []
-            
-            # Known customer folder UIDs
-            customer_folders = {
-                'hoC-cSZloyT3rWmPHTRlpA': ('test-extern1.local (100000)', 'intern'),
-                'W9LGwI-3uVeBaoYh6r-iEQ': ('test-extern2.local (200000)', 'extern'),
-                'HkGCEGzahSpXb2cIwA4jNQ': ('test-extern3.local (300000)', 'intern'),
-                'GK-qlciy45TBw_g6407gWw': ('test-extern4.local (400000)', 'extern')
-            }
             
             for uid, (name, category) in customer_folders.items():
                 if uid in self.params.folder_cache:
@@ -376,4 +368,5 @@ def main():
     generator.run()
 
 if __name__ == "__main__":
+
     main()
