@@ -1,6 +1,15 @@
-# Dependencies for Keeper Credential PDF Generator
-# Install via: pip install -r requirements.txt
+# Keeper PDF Generator Requirements
+# Python dependencies for generating PDFs from Keeper vault data
 
-docxtpl==0.16.8  # For Word template placeholder filling
-pywin32==306  # For PDF conversion using Windows Word COM API
-# Note: Keeper Commander SDK is used from the local cloned repo (Commander/), so not listed here. 
+# Keeper Commander SDK
+keepercommander>=16.0.0
+
+# Document template processing
+docxtpl>=0.16.0
+python-docx>=0.8.11
+
+# Windows COM automation (for PDF conversion)
+pywin32>=306
+
+# Optional: Additional utilities
+requests>=2.28.0
